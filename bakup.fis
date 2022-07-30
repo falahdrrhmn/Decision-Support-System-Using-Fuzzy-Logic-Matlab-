@@ -1,0 +1,72 @@
+[System]
+Name='uas'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='IPK'
+Range=[0 4]
+NumMFs=3
+MF1='rendah':'trimf',[1.68 2.25925925925926 2.82]
+MF2='sedang':'trimf',[2.25 2.77 3.39]
+MF3='tinggi':'trimf',[2.82 3.03 3.95]
+
+[Input2]
+Name='Semester'
+Range=[0 12]
+NumMFs=3
+MF1='kurang':'trimf',[4 8.08 8.1]
+MF2='cukup':'trimf',[6 8.49 10]
+MF3='lebih':'trimf',[8 9.89 12]
+
+[Input3]
+Name='LamaBerorganisasi'
+Range=[0 4]
+NumMFs=3
+MF1='baru':'trimf',[0 1.5 2]
+MF2='sedang':'trimf',[1 2 3]
+MF3='lama':'trimf',[2 3 4]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=2
+MF1='tidak_lulus':'trimf',[0 0 0]
+MF2='lulus':'trimf',[1 1 1]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 1 (1) : 1
+1 2 3, 2 (1) : 1
+1 3 1, 1 (1) : 1
+1 3 2, 1 (1) : 1
+1 3 3, 1 (1) : 1
+2 1 1, 1 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 3, 1 (1) : 1
+2 2 1, 2 (1) : 1
+2 2 2, 2 (1) : 1
+2 2 3, 2 (1) : 1
+2 3 1, 1 (1) : 1
+2 3 2, 1 (1) : 1
+2 3 3, 1 (1) : 1
+3 1 1, 1 (1) : 1
+3 1 2, 1 (1) : 1
+3 1 3, 1 (1) : 1
+3 2 1, 2 (1) : 1
+3 2 2, 2 (1) : 1
+3 2 3, 2 (1) : 1
+3 3 1, 1 (1) : 1
+3 3 2, 1 (1) : 1
+3 3 3, 1 (1) : 1
